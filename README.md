@@ -6,7 +6,11 @@ Please check out in Heroku [here](###http://burger.herokuapp.com/)!
 
 
 ### Functionality
-
+Utilizes 3 basic CRUD functions:
+  1. READ all entries from MySQL database and using Handlebars displays to the DOM.
+  2. UPDATE a selected burger by clicking "Devour It."
+  3. CREATE a new burger using the "Place Order" entry option.
+   
 ### Screenshots
 - Desktop View
   * ![Full Size](###/screenshots/fullsize.png)
