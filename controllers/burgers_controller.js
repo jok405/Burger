@@ -1,19 +1,35 @@
-
-// node dependencies - hopefully they will behave...
+// Node Dependencies
 const express = require('express');
+const router = express.Router();
 const burger = require('../models/burger.js');
 
-// construct proper route methods
+// Index Redirect
+router.get('/', function (req, res) {
+  res.redirect('/index');
+});
 
-// Initial page: which route?
-    // can or should the burgers display on DOM?
+// Index Page (render all burgers to DOM)
+router.get('/index', function (req, res) {
+  burger.selectAll(function(data) {
+    var hbsObject = { burgers: data };
+    //console.log(hbsObject);
+    res.render('index', hbsObject);
+  });
+});
 
-// Assembly of burger
-    // definitely post route ('/', fn(req, res){})
+// Create a New Burger
+router.post('/burger/create', function (req, res) {
+  burger.insertOne(req.body.burger_name, function() {
+    res.redirect('/index');
+  });
+});
 
-// Burger consumption
-    // may need to check route post or put.
+// Devour a Burger
+router.post('/burger/eat/:id', function (req, res) {
+  burger.updateOne(req.params.id, function() {
+    res.redirect('/index');
+  });
+});
 
-module.exports = routeHandling;
-
-
+// Export routes
+module.exports = router;

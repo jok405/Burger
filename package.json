@@ -1,5 +1,5 @@
 {
-  "name": "burger",
+  "name": "burgers",
   "version": "1.0.0",
   "description": "ORM and CRUD functions",
   "main": "server.js",
@@ -23,5 +23,6 @@
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.10",
     "mysql": "^2.15.0"
-  }
+  },
+  "devDependencies": {}
 }
