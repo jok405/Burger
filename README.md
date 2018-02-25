@@ -13,8 +13,8 @@ Utilizes 3 basic CRUD functions:
    
 ### Screenshots:
 - Desktop View
-  * ![Full Size](###/screenshots/fullsize.png)
+  * ![Full Size](/screenshots/desktop.png)
 
 
 - Mobile View
-  * ![Mobile Size](###/screenshots/mobile.png)
+  * ![Mobile Size](/screenshots/mobile.png)
